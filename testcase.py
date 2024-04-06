@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
+import time
 
 # Start the WebDriver and open the HTML page
 service = Service(executable_path='/usr/local/bin/chromedriver')
@@ -27,6 +28,9 @@ try:
 
     # If the element is found, print success message
     print("Test Passed: Found h1 tag containing 'Magic Website'")
+    timestamp = time.strftime("%Y%m%d-%H%M%S")
+    screenshot_file = f"screenshot_{timestamp}.png"
+    driver.save_screenshot(screenshot_file)
 except Exception as e:
     # If the element is not found, print failure message
     print("Test Failed:", e)
