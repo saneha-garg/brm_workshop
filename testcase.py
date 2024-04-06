@@ -9,7 +9,7 @@ URL = 'https://saneha-garg.github.io/brm_workshop/'
 
 # Initialize Chrome WebDriver
 service = Service(
-    executable_path='D:/HP/Desktop/chromedriver.exe')
+    executable_path='/usr/local/bin/chromedriver')
 options = webdriver.ChromeOptions()
 options.add_argument("--headless")
 options.add_argument('--no-sandbox')
