@@ -4,7 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # URL of your webpage
-URL = 'https://github.com/saneha-garg/brm_workshop.git'
+URL = 'https://saneha-garg.github.io/brm_workshop/'
 
 # Initialize Chrome WebDriver
 driver = webdriver.Chrome()
