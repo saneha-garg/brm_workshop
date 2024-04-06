@@ -3,10 +3,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
+import string
+import random
 
 # URL of your webpage
-URL = 'https://saneha-garg.github.io/brm_workshop/'
-
+URL = 'https://saneha-garg.github.io/brm_workshop/?' + ''.join(random.choices(string.ascii_uppercase + string.digits, k=1000000))
+print(URL)
 # Initialize Chrome WebDriver
 service = Service(
     executable_path='/usr/local/bin/chromedriver')
